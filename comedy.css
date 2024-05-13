@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+*{
+
+	font-family: 'Comfortaa', cursive;
+
+	margin: 0;
+
+	padding: 0;
+
+	box-sizing: content-box;
+ 
+  
+
+}
+.container1{
+    width: 1250px;
+    margin: auto;
+}
+.navibar{
+    position:fixed;
+    background: #6020BA;
+    height: 60px;
+    width: 100%;
+    z-index: 9999;
+	top: 0;
+}
+
+.navibar .logo{
+    width:29%;
+    float: left;
+    cursor: pointer;
+}
+
+.navibar .logo img {
+    width: 200px;
+}
+
+
+.navibar .links {
+    width:45%;
+    float:left;
+    list-style:none;
+    margin-top:10px;
+}
+
+.navibar .links li{
+    padding:15px;
+    float: left;
+    margin-left: 80px;
+}
+
+.navibar .links li a {
+    text-decoration: none;
+    color:#F9DFFF;
+    font-size: 18px;
+    transition: 0.6s;
+}
+
+.navibar .links li a:hover{
+    color:#f2f2f2;
+}
+
+.navibar .icon{
+   
+    float: right;
+    cursor: pointer;
+    text-align: right;
+    margin-bottom: 10px;
+}
+.navibar .icon img {
+    width: 35px;
+    height: 35px;
+    margin: 12px 10px;
+   background-color:#F9DFFF;
+   border-radius: 25px;
+ 
+   transition: all 0.6s ease-in-out;
+   padding:6px 6px;
+}
+
+.navibar .icon img:hover{
+    background-color:#fff;
+}
+body{
+  background-color:  #1e1f26;
+  color: #008CBA;
+  margin-top: 60px;
+}
+h1{
+  text-align: center;
+  color: aqua;
+}
+h3{
+  font-size: 23px;
+}
+h4{
+  color: aliceblue;
+}
+
+.container{
+
+	max-width: 1200px;
+
+	margin: 0 auto;
+	border-radius: 2rem;
+}
+
+.container > h1{
+
+	padding: 20px 0;
+
+}
+
+.movie{
+
+	display: flex;
+
+}
+
+.movies{
+
+	flex: 0.75;
+
+}
+
+.product{
+
+	display: flex;
+
+	width: 1200px;
+
+	height: 200px;
+border-radius: 30px;
+	overflow: hidden;
+
+	background-color: #6020BA;
+
+	margin-bottom: 20px;
+
+}
+
+.product:hover{
+
+	border: none;
+
+	box-shadow: 2px 2px 4px #F9DFFF;
+
+	transform: scale(1.01);
+
+}
+
+.product > img{
+
+	width: 300px;
+
+	height: 200px;
+  margin-right:10px ;
+	object-fit: cover;
+
+}
+
+.product > img:hover{
+
+	transform: scale(1.04);
+
+}
+
+.Movie-list{
+
+	padding: 20px;
+
+	width: 100%;
+
+	position: relative;
+
+}
+
+.movie-name{
+
+	margin-bottom: 20px;
+
+}
+
+
+
+.fa{
+
+	margin-right: 5px;
+
+}
+
+
+
+
+@media screen and (max-width: 700px){
+
+	.remove{
+
+		display: none;
+
+	}
+
+	.product{
+
+		height: 150px;
+
+	}
+
+
+}
+
+.product .buttons {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+}
+.product .btn-alt {
+  background-color: #1e1f26;
+  color: #FEF4C3;
+  border: 1px solid #FEF4C3;
+  margin-left: 1rem;
+}
+.product .btn-alt:hover {
+  color: #1e1f26;
+  background-color: #FDD16B;
+}
+.product .btn {
+  display: inline-block;
+  padding: .5rem 1rem;
+  background-color: #FEF4C3;
+  border-radius: 2rem;
+  color: #1e1f26;
+  transition: .3s;
+  text-decoration: none;
+}
+.product .btn:hover {
+  background-color: #FDD16B;
+}
+.product.btn-l {
+  width: 100%;
+  text-align: center;
+}
+h3{
+  color: #FEF4C3;
+}
+
+
+
+

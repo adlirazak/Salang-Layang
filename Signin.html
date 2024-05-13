@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign In</title>
+  <link rel="stylesheet" href="Signin.css">
+</head>
+<body>
+  <div class="navibar">
+    <div class="container1">
+      <div class="logo">
+        <img src="salanglayang.png">
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Sign In</h1>
+    <form onsubmit="validateForm(event)">
+      <input type="text" id="username" placeholder="Username" ><br>
+      <input type="password" id="password" placeholder="Password" ><br>
+      <input type="submit" value="Sign In" name="signin">
+    </form>
+    <p>Don't have an account? <a href="SignUp.html">Sign Up</a></p>
+  </div>
+
+  <script>
+    function validateForm(event) {
+      event.preventDefault(); // Prevent form submission
+      
+      const username = document.getElementById('username');
+      const password = document.getElementById('password');
+      
+      if (username.value.trim() === '') {
+        alert('Please enter your username.');
+        username.focus();
+        return false;
+      }
+      
+      if (password.value.trim() === '') {
+        alert('Please enter your password.');
+        password.focus();
+        return false;
+      }
+      
+ 
+
+
+      const urlParams = new URLSearchParams(window.location.search);
+        const error = urlParams.get('error');
+        const correct = urlParams.get('correct');
+    
+        if (error === '1') {
+            alert('Wrong email or Password');
+           
+        } else if (correct === '1') {
+            alert('Successfully Registered');
+            window.location.href = 'mainPage.html';
+            
+
+       }
+
+    }
+  </script>
+</body>
+</html>
+

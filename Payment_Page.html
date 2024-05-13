@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <link rel="stylesheet" href="Payment_Page.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <title>Payment Page</title>
+</head>
+
+<body>
+        <div class="navibar">
+            <div class="container">
+                <div class="logo">
+                    <a href="mainPage.html">
+                        <img src="salanglayang.png">
+                    </a>
+                    
+                </div>
+                <ul class="links">
+                    <li><a href="mainPage.html">Home</a></li>
+                    <li><a href="">Showtimes</a></li>
+                    <li><a href="help.html">Help</a></li>
+
+                </ul>
+
+                <div class="icon">
+                    <a href="Profile.html">
+                        <img src="profile.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <form class="form" onsubmit="validateForm(event)" action="payment.php" method="post">
+        <div class="body-form">
+            <div class="form-container">
+                <div class="form-container_details">
+                    <p style="color: #F9DFFF; font-size: 40px; text-align: center;"><b>BOOK TICKET</b></p>
+                    <div class="form-container_subtitle">Please enter the seat and time</div>
+                </div>
+                <div class="form-field">
+                    <div class="form-label" for="movie_name">Movie Name:</div>
+                    <select class="form-input" type="text" name="movie_name">
+                        <option>Lyle, Lyle, Crocodile</option>
+                        <option>Puss in Boots: The Last Wish</option>
+                        <option>Joy Ride</option>
+                        <option>Saw X</option>
+                        <option>Megan</option>
+                        <option>The Invitation</option>
+                        <option>The Flash</option>
+                        <option>Transformers: Rise of the Beasts</option>
+                        <option>Spider-Man: Across the Spider-Verse</option>
+                        <option>Love Again</option>
+                        <option>Imaginur</option>
+                        <option>To All the Boys I've Loved Before</option>
+                    </select>
+                </div>
+                
+                <div class="form-field">
+                    <div class="form-label" for="seat">Seat:</div>
+                    <select class="form-input" type="text" name="seat">
+                        <option>A1</option>
+                        <option>A2</option>
+                        <option>A3</option>
+                        <option>B1</option>
+                        <option>B2</option>
+                        <option>B3</option>
+                        <option>C1</option>
+                        <option>C2</option>
+                        <option>C3</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <div class="form-label" for="book_time">Times:</div>
+                    <select class="form-input" type="time" name="book_time">
+                        <option>10:00 a.m.</option>
+                        <option>12:00 p.m.</option>
+                        <option>2:00 p.m.</option>
+                        <option>4:00 p.m.</option>
+                        <option>6:00 p.m.</option>
+                        <option>8:00 p.m.</option>
+                        <option>10:00 p.m.</option>
+                        <option>12:00 a.m.</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <div class="form-label" for="price">Price:</div>
+                    <select class="form-input" type="number" name="price">
+                        <option value="8">Child (Under 12 years old) > RM 8</option>
+                        <option value="14">Adult > RM 14</option>
+                        <option value="8">Elderly (Above 60 years old) > RM 8</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="body-form">
+            <div class="form-container">
+                <div class="form-container_details">
+                    <p style="color: #F9DFFF; font-size: 40px; text-align: center;"><b>PAYMENT</b></p>
+                    <div class="form-container_subtitle">Please enter the payment detail</div>
+                </div>
+                <div class="form-field">
+                    <div class="form-label" for="user_name">Name</div>
+                    <input class="form-input" type="text" name="user_name" />
+                    <div id="user_nameError" class="error-message"></div>
+                </div>
+                <div class="form-field">
+                    <div class="form-label" for="credit_card">Credit Card Number</div>
+                    <input class="form-input" type="number" name="credit_card" />
+                    <div id="credit_cardError" class="error-message"></div>
+                </div>
+                <div class="form-field">
+                    <div class="form-label" for="ccv">CCV</div>
+                    <input class="form-input" type="number" name="ccv" />
+                    <div id="ccvError" class="error-message"></div>
+                </div>
+                <div class="form-field">
+                    <div class="form-label" for="exp_date">Exp Date</div>
+                    <input class="form-input" type="date" name="exp_date" />
+                    <div id="exp_dateError" class="error-message"></div>
+                </div>
+                <div class="form-field">
+                    <div class="form-label" for="email">Email</div>
+                    <input class="form-input" type="text" name="email" />
+                    <div id="emailError" class="error-message"></div>
+                </div>
+                <input class="form-submit" type="submit" value="Make Payment"  onclick="showpopup()"></input>
+            </div>
+        </div>
+    </form>
+<script>
+    function showpopup() { 
+
+            const user_name = document.getElementById('user_name');
+        const user_nameError = document.getElementById('user_name-error');
+            if (!user_name.checkValidity()) {
+                user_nameError.textContent = 'Please enter a valid name';
+                user_name.classList.add('invalid');
+            } else {
+                user_nameError.textContent = '';
+                user_name.classList.remove('invalid');
+            }
+
+            const email = document.getElementById('email');
+        const emailError = document.getElementById('email-error');
+            if (!email.checkValidity()) {
+                emailError.textContent = 'Please enter a valid email';
+                email.classList.add('invalid');
+            } else {
+                emailError.textContent = '';
+                email.classList.remove('invalid');
+            }
+            const credit_card = document.getElementById('credit_card');
+        const credit_cardError = document.getElementById('credit_card-error');
+            if (!credit_card.checkValidity()) {
+                credit_cardError.textContent = 'Please enter a valid credit card number (12 digit)';
+                credit_card.classList.add('invalid');
+            } else {
+                credit_cardError.textContent = '';
+                credit_card.classList.remove('invalid');
+            }
+            const ccv = document.getElementById('ccv');
+        const ccvError = document.getElementById('ccv-error');
+            if (!ccv.checkValidity()) {
+                ccvError.textContent = 'Please enter a valid ccv number (4 digit)';
+                ccv.classList.add('invalid');
+            } else {
+                ccvError.textContent = '';
+                ccv.classList.remove('invalid');
+            }
+            const exp_date = document.getElementById('exp_date');
+        const exp_dateError = document.getElementById('exp_date-error');
+            if (!exp_date.checkValidity()) {
+                exp_dateError.textContent = 'Please enter the expired date';
+                exp_date.classList.add('invalid');
+            } else {
+                exp_dateError.textContent = '';
+                exp_date.classList.remove('invalid');
+            }
+}
+</script>    
+</body>
+
+</html>

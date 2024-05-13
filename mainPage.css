@@ -1,0 +1,218 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding:0;
+    font-family: sans-serif;
+}
+.container{
+    width: 1250px;
+    margin: auto;
+}
+.navibar{
+    position:fixed;
+    background: #6020BA;
+    height: 60px;
+    width: 100%;
+    z-index: 9999;
+}
+
+.navibar .logo{
+    width:29%;
+    float: left;
+    cursor: pointer;
+}
+
+.navibar .logo img {
+    width: 200px;
+}
+
+
+.navibar .links {
+    width:45%;
+    float:left;
+    list-style:none;
+    margin-top:10px;
+}
+
+.navibar .links li{
+    padding:15px;
+    float: left;
+    margin-left: 80px;
+}
+
+.navibar .links li a {
+    text-decoration: none;
+    color:#F9DFFF;
+    font-size: 18px;
+    transition: 0.6s;
+}
+
+.navibar .links li a:hover{
+    color:#f2f2f2;
+}
+
+.navibar .icon{
+   
+    float: right;
+    cursor: pointer;
+    text-align: right;
+}
+.navibar .icon img {
+    width: 40px;
+    height: 40px;
+    margin: 12px 10px;
+   background-color:#F9DFFF;
+   border-radius: 20px;
+   transition: all 0.6s ease-in-out;
+   padding:6px 6px;
+}
+
+.navibar .icon img:hover{
+    background-color:#fff;
+}
+
+
+
+.mySlides {display: none}
+.mySlides img {vertical-align: text-bottom;}
+
+/* Slideshow container */
+.slideshow-container {
+ background-color:#F9DFFF;
+  position:relative ;
+  
+}
+.mySlides image{margin:100px;}
+
+
+
+
+
+/* Caption text */
+.text {
+  color: #6020BA;
+  font-size: 30px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+
+  text-align: center;
+  
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.header{
+    background: #1e1f26;
+    height: 300px;
+    color:#6020BA;
+    overflow:hidden;
+}
+
+.header .container{
+    display: flex;
+}
+
+.header .container .div{width:50%}
+
+.header .first {
+    position:relative;
+    margin-top:40px;
+}
+
+.header .first:before{
+    content:"";
+    position: absolute;
+    left:0;
+    top: 15%;
+    height:10%;
+    width:1px;
+    background:#f2f2f2;
+}
+.header .first .box{
+    position:relative;
+    width:100%;
+    padding-left:10%;
+}
+
+.header .first .box::before{
+    content:'';
+    position: absolute;
+    left:0;
+    top:10px;
+    height:98%;
+    width:1px;
+    background: #6020BA;
+
+}
+.first .box .button{
+    
+    font-size: 22px;
+    border:#bbb;
+    text-shadow:#F9DFFF;
+    color:#F9DFFF;
+    margin: 12px 10px;
+   background-color:#6020BA;
+   transition: all 0.6s ease-in-out;
+   cursor: pointer;
+   margin-top:50px;
+   border-radius: 30px;
+   padding: 15px;
+   
+}
+.first .box .button:hover{
+    background-color:#fff;
+}
+
+.first .box .button2{
+    
+    font-size: 22px;
+    border:#bbb;
+    text-shadow:#F9DFFF;
+    color:#F9DFFF;
+    margin: 12px 10px;
+   background-color:#6020BA;
+   transition: all 0.6s ease-in-out;
+   cursor: pointer;
+   margin-top:50px;
+   border-radius: 30px;
+   padding: 15px;
+    margin-left: 100px;
+}
+.first .box .button2:hover{
+    background-color:#fff;
+}
+
+
+
+

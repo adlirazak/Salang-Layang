@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>MechaKey</title>
+        
+        <link rel="stylesheet" href="help.css">
+    </head>
+    <body>
+        <div class="navibar">
+            <div class="container">
+                <div class="logo">
+                    <a href="mainPage.html">
+    <img src="salanglayang.png">
+</a>
+
+                </div>
+                <ul class="links">
+                    <li><a href="mainPage.html">Home</a></li>
+                    <li><a href="movie 1.html">Showtimes</a></li>
+                    <li><a href="help.html">Help</a></li>
+
+                </ul>
+
+                <div class="icon">
+                    <a href="Profile.php">
+                        <img src="profile.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class=" survey">
+            <div class="text">
+                <p style="color: #6020BA;">MechaKey Help Centre</p>
+                <h2 style="color: #6020BA;">If you have any problem...just ask us :)</h2>
+            </div>
+            
+        </div>
+
+        <div class="survey2">
+            <div class="container">
+                <div class="first">
+                    <form>
+
+                        <label for="email">Enter your email:</label><br>
+                        <input type="email" id="email" name="email">
+                        <div id="emailError" class="error-message"></div><br><br>
+                        
+
+
+                        <label for="todayDate">Today Date</label><br>
+                        <input type="date" id="todayDate" name="todayDate" required>
+                        <div id="dateError" class="error-message"><br><br>
+                        
+
+                        <label for="fname">First Name</label><br>
+                        <input type="text" id="fname" name="firstname" placeholder="Your first name.." required>
+                        <div id="fnameError" class="error-message"></div>
+                        <br><br>
+                    
+                        <label for="lname">Last Name</label><br>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+                        <div id="lnameError" class="error-message"></div><br><br>
+                    
+                        <label for="type">Question Type</label><br>
+                        <select id="type" name="type">
+                          <option value="Movie">Movie</option>
+                          <option value="Genre">Genre</option>
+                          <option value="Profile">Profile</option>
+                          <option value="Payment">Payment</option>
+                          <option value="Others">Others</option>
+                        </select>
+                    
+                        <label for="subject"></label>
+                        <textarea id="subject" name="subject" placeholder="Write the question you want to ask..." style="height:200px"></textarea>
+                    
+
+                        
+                        <br><br>
+                        <button type="submit" onclick="showpopup()">Submit</button>
+
+
+                      </form>
+                      
+        </div>
+    </div>
+    </div>
+
+    <script>
+
+
+function showpopup() { const fname = document.getElementById('name');
+        const fnameError = document.getElementById('name-error');
+            if (!fname.checkValidity()) {
+                fnameError.textContent = 'Please enter a valid name';
+                fname.classList.add('invalid');
+            } else {
+                fnameError.textContent = '';
+                fname.classList.remove('invalid');
+            }
+
+            const email = document.getElementById('email');
+        const emailError = document.getElementById('email-error');
+            if (!email.checkValidity()) {
+                emailError.textContent = 'Please enter a valid email';
+                email.classList.add('invalid');
+            } else {
+                emailError.textContent = '';
+                email.classList.remove('invalid');
+            }
+            const date = document.getElementById('date');
+        const dateError = document.getElementById('date-error');
+            if (!date.checkValidity()) {
+                dateError.textContent = 'Please enter the date';
+                date.classList.add('invalid');
+            } else {
+                dateError.textContent = '';
+                date.classList.remove('invalid');
+            }
+            const lname = document.getElementById('name');
+        const lnameError = document.getElementById('name-error');
+            if (!lname.checkValidity()) {
+                lnameError.textContent = 'Please enter a valid name';
+                lname.classList.add('invalid');
+            } else {
+                lnameError.textContent = '';
+                lname.classList.remove('invalid');
+            }
+          
+
+
+   
+    //Display the popup
+    alert('Thank you for asking to us...We will send you the answer in about 1 days of working hour ' ) ;    
+}
+       
+    </script>
+    </body>
+</html>
